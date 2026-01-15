@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kader Attendance | نظام الحضور الذكي</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <!-- Logo Placeholder - Replace src with actual path -->
+                <img src="assets/images/logo_kader.png" alt="Kader Logo" class="logo-img"
+                    onerror="this.style.display='none'">
+                <div class="brand-names">
+                    <h1 class="brand-ar">كادر</h1>
+                    <span class="brand-en">Kader</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <!-- Lecturer Link -->
+                <a href="#" class="nav-link" data-i18n="nav_lecturer">للمحاضرين</a>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="btn-ghost" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <!-- Language Toggle -->
+                <button id="lang-toggle" class="btn-ghost" aria-label="Switch Language">
+                    <i data-lucide="languages"></i>
+                    <span id="current-lang-text">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge" data-i18n="hero_badge">نظام رسمي معتمد</span>
+                    <h2 class="hero-title" data-i18n="hero_title">نظام الحضور والغياب الذكي للتعليم الطبي</h2>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        حل تقني متكامل، آمن، ويعمل بدون إنترنت. مصمم خصيصاً لكليات الطب ومراكز التدريب.
+                    </p>
+
+                    <div class="action-buttons">
+                        <!-- iOS Button -->
+                        <button id="btn-ios" class="btn-primary">
+                            <i data-lucide="apple"></i>
+                            <div class="btn-text">
+                                <span class="small" data-i18n="download_on">تحميل لأجهزة</span>
+                                <span class="large">iPhone</span>
+                            </div>
+                        </button>
+
+                        <!-- Android Button -->
+                        <a href="#" id="btn-android" class="btn-secondary">
+                            <i data-lucide="smartphone"></i>
+                            <div class="btn-text">
+                                <span class="small" data-i18n="download_on">تحميل ملف</span>
+                                <span class="large">APK (Android)</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="how_it_works_title">كيف يعمل النظام</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <i data-lucide="smartphone" class="step-icon"></i>
+                        <h4 data-i18n="step_open">فتح التطبيق</h4>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="chevron-left"></i>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <i data-lucide="radio" class="step-icon"></i>
+                        <h4 data-i18n="step_connect">تلامس أو اختيار</h4>
+                    </div>
+                    <div class="step-arrow">
+                        <i data-lucide="chevron-left"></i>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <i data-lucide="check-circle" class="step-icon"></i>
+                        <h4 data-i18n="step_done">تم التسجيل</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="shield-check" class="feature-icon"></i>
+                        <h3 data-i18n="feat_secure_title">آمن وموثوق</h3>
+                        <p data-i18n="feat_secure_desc">يعتمد على تقنيات مشفرة لضمان دقة البيانات</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="wifi-off" class="feature-icon"></i>
+                        <h3 data-i18n="feat_offline_title">يعمل بدون إنترنت</h3>
+                        <p data-i18n="feat_offline_desc">لا يشترط اتصال الطالب بالإنترنت لتسجيل الحضور</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="nfc" class="feature-icon"></i>
+                        <h3 data-i18n="feat_tech_title">تقنيات حديثة</h3>
+                        <p data-i18n="feat_tech_desc">دعم كامل لتقنيات NFC و Bluetooth</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="layout-dashboard" class="feature-icon"></i>
+                        <h3 data-i18n="feat_dashboard_title">لوحة تحكم متقدمة</h3>
+                        <p data-i18n="feat_dashboard_desc">تقارير لحظية وإحصائيات شاملة للمؤسسات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Institutions Section -->
+        <section class="institutions-section">
+            <div class="container">
+                <div class="institutions-header">
+                    <span class="badge" data-i18n="inst_badge">للمؤسسات</span>
+                    <h2 data-i18n="inst_title">إدارة مركزية لمؤسستك</h2>
+                    <p data-i18n="inst_desc">لوحة تحكم متقدمة تمكنك من متابعة نسب الحضور لحظياً وتصدير تقارير
+                        تفصيلية لكل كورس ومجموعة ومحاضر ومتعلم</p>
+                </div>
+
+                <div class="inst-features-grid">
+                    <div class="inst-feature-card">
+                        <div class="inst-feature-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h4 data-i18n="inst_feat1">متابعة لحظية للحضور</h4>
+                    </div>
+                    <div class="inst-feature-card">
+                        <div class="inst-feature-icon">
+                            <i data-lucide="file-spreadsheet"></i>
+                        </div>
+                        <h4 data-i18n="inst_feat2">تقارير تفصيلية قابلة للتصدير</h4>
+                    </div>
+                    <div class="inst-feature-card">
+                        <div class="inst-feature-icon">
+                            <i data-lucide="user-cog"></i>
+                        </div>
+                        <h4 data-i18n="inst_feat3">إدارة صلاحيات المحاضرين</h4>
+                    </div>
+                </div>
+
+                <div class="inst-cta">
+                    <a href="#" class="btn-outline" data-i18n="inst_cta">تواصل معنا</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/logo_kader.png" alt="Kader Logo" class="footer-logo-img">
+            </div>
+            <p data-i18n="footer_copy">&copy; 2024 نظام كادر - جميع الحقوق محفوظة.</p>
+            <div class="footer-links">
+                <a href="https://t.me/SMST_Technical_Support_BOT" target="_blank" class="support-link">
+                    <i data-lucide="message-circle"></i>
+                    <span data-i18n="support_btn">الدعم الفني</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- iOS Modal -->
+    <div id="ios-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+
+            <div class="modal-header">
+                <i data-lucide="download-cloud" class="modal-icon"></i>
+                <h3 data-i18n="modal_title">طريقة التحميل على iPhone</h3>
+            </div>
+
+            <div class="progress-bar">
+                <div class="step active" id="step-1-indicator">1</div>
+                <div class="line"></div>
+                <div class="step" id="step-2-indicator">2</div>
+            </div>
+
+            <!-- Step 1 -->
+            <div id="step-1" class="step-content">
+                <h4 data-i18n="step1_title">تحميل تطبيق TestFlight</h4>
+                <p data-i18n="step1_desc">يجب تحميل تطبيق TestFlight أولاً من متجر أبل لتتمكن من تثبيت النسخة التجريبية.
+                </p>
+                <a href="https://apps.apple.com/eg/app/testflight/id899247664" target="_blank" class="btn-step"
+                    id="btn-step-1">
+                    <span data-i18n="btn_download_testflight">تحميل TestFlight</span>
+                    <i data-lucide="external-link"></i>
+                </a>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="step-2" class="step-content hidden">
+                <h4 data-i18n="step2_title">تحميل تطبيق BardiMad</h4>
+                <p data-i18n="step2_desc">الآن يمكنك الانضمام للنسخة التجريبية وتحميل تطبيق الطالب.</p>
+                <a href="https://testflight.apple.com/join/Std3CMs1" target="_blank" class="btn-step" id="btn-step-2">
+                    <span data-i18n="btn_download_app">تحميل التطبيق (طلاب)</span>
+                    <i data-lucide="download"></i>
+                </a>
+            </div>
+
+            <div class="modal-actions">
+                <button id="btn-next-step" class="btn-primary-small" data-i18n="btn_next">التالي</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
