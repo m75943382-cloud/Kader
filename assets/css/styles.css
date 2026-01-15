@@ -323,8 +323,9 @@ button {
 }
 
 .btn-secondary:hover {
-    opacity: 0.9;
-    background-color: var(--bg-main);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    opacity: 0.95;
 }
 
 .btn-text {
