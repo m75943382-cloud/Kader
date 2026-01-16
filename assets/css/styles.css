@@ -156,7 +156,7 @@ button {
 }
 
 .brand-ar {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--brand-gold);
     font-weight: 700;
 }
@@ -165,7 +165,7 @@ button {
     font-size: 1.1rem;
     color: var(--brand-gold);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
