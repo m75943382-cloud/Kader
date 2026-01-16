@@ -948,11 +948,22 @@ html[dir="ltr"] .modal-close {
     }
 
     .step-arrow {
+        transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .step-arrow svg {
+        display: block;
         transform: rotate(-90deg);
     }
 
-    html[dir="ltr"] .step-arrow {
-        transform: rotate(90deg);
+    html[dir="ltr"] .step-arrow svg {
+        display: block;
+        transform: rotate(-90deg);
     }
 
     .step-item {
