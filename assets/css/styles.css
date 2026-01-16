@@ -958,12 +958,12 @@ html[dir="ltr"] .modal-close {
 
     .step-arrow svg {
         display: block;
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) !important;
     }
 
     html[dir="ltr"] .step-arrow svg {
         display: block;
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) !important;
     }
 
     .step-item {
