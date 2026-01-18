@@ -43,7 +43,8 @@ const translations = {
         step2_desc: "الآن يمكنك الانضمام للنسخة التجريبية وتحميل تطبيق الطالب",
         btn_download_app: "تحميل التطبيق (طلاب)",
         btn_next: "التالي",
-        lang_btn_text: "English"
+        lang_btn_text: "English",
+        download_started: "تم بدء التنزيل! تفقد مجلد التنزيلات 📥"
     },
     en: {
         hero_badge: "Official Certified System",
@@ -89,7 +90,8 @@ const translations = {
         step2_desc: "Join the beta and download the student app",
         btn_download_app: "Download App (Student)",
         btn_next: "Next",
-        lang_btn_text: "العربية"
+        lang_btn_text: "العربية",
+        download_started: "Download started! Check your Downloads folder 📥"
     }
 };
 
@@ -105,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('ios-modal');
     const modalClose = document.querySelector('.modal-close');
     const btnNext = document.getElementById('btn-next-step');
+    const btnAndroid = document.getElementById('btn-android');
 
     const step1Content = document.getElementById('step-1');
     const step2Content = document.getElementById('step-2');
@@ -249,5 +252,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnNext.style.display = 'inline-block';
         lucide.createIcons();
+    }
+
+    // Toast Notification Function
+    function showToast(message) {
+        // Remove existing toast if any
+        const existingToast = document.querySelector('.toast-notification');
+        if (existingToast) {
+            existingToast.remove();
+        }
+
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.innerHTML = `
+            <i data-lucide="download" class="toast-icon"></i>
+            <span>${message}</span>
+        `;
+        document.body.appendChild(toast);
+        lucide.createIcons();
+
+        // Show toast
+        setTimeout(() => toast.classList.add('show'), 100);
+
+        // Hide and remove after 4 seconds
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    }
+
+    // Android Download Button - Show Toast
+    if (btnAndroid) {
+        btnAndroid.addEventListener('click', () => {
+            const message = translations[currentLang].download_started;
+            showToast(message);
+        });
     }
 });

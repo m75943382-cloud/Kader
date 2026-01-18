@@ -1155,3 +1155,46 @@ html[dir="ltr"] .modal-close {
         font-size: 1.4rem;
     }
 }
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 16px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px var(--shadow-color);
+    border: 1px solid var(--brand-gold);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-notification .toast-icon {
+    color: var(--brand-gold);
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .toast-notification {
+        width: 90%;
+        bottom: 20px;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
+}
